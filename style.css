@@ -1000,6 +1000,28 @@ button,
   line-height: 1.55;
 }
 
+/* ========== STYLE ART BANNER ========== */
+
+.art-banner-frame {
+  width: min(100%, 720px);
+  margin: 0 auto;
+  background: var(--near-black);
+  border: 4px solid var(--near-black);
+  border-radius: var(--radius-lg);
+  padding: 0.65rem;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.art-banner-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius-lg) - 8px);
+  object-fit: cover;
+  object-position: center;
+}
+
 /* ========== NARRATIVE ========== */
 
 .narrative {
@@ -1900,6 +1922,12 @@ button,
     overflow-x: clip;
   }
 
+  .art-banner-frame {
+    width: min(100%, 560px);
+    padding: 0.5rem;
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.25);
+  }
+
   .timeline-card-hot {
     overflow: hidden;
   }
@@ -2121,6 +2149,11 @@ button,
   .community,
   .game-section {
     padding: 3.25rem 0;
+  }
+
+  .art-banner-frame {
+    width: min(100%, 100%);
+    max-width: 420px;
   }
 
   .about-layout {
