@@ -354,11 +354,6 @@ button,
   display: block;
 }
 
-.nav-social-btn[data-social="telegram"] img {
-  width: 20px;
-  height: 20px;
-}
-
 .nav-social-btn:hover {
   background: var(--yellow-bright);
   transform: translateY(-2px);
@@ -1515,11 +1510,14 @@ button,
 }
 
 .social-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 240px));
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 2.25rem;
+  align-items: stretch;
+  gap: 1rem;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto 2.25rem;
 }
 
 .social-card {
@@ -1528,6 +1526,10 @@ button,
   align-items: center;
   text-align: center;
   gap: 0.35rem;
+  flex: 0 0 240px;
+  width: 240px;
+  max-width: 100%;
+  box-sizing: border-box;
   background: var(--cream);
   border: 3px solid var(--near-black);
   border-radius: var(--radius-md);
@@ -1956,7 +1958,7 @@ button,
   }
 
   .social-grid {
-    grid-template-columns: repeat(3, minmax(0, 200px));
+    gap: 1rem;
   }
 
   .footer-grid {
@@ -2240,12 +2242,14 @@ button,
   }
 
   .social-grid {
-    grid-template-columns: minmax(0, 280px);
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 0.75rem;
   }
 
   .social-card {
+    width: min(280px, 100%);
+    flex-basis: auto;
     padding: 1.1rem 1rem;
   }
 
