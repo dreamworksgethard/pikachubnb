@@ -354,6 +354,11 @@ button,
   display: block;
 }
 
+.nav-social-btn[data-social="telegram"] img {
+  width: 20px;
+  height: 20px;
+}
+
 .nav-social-btn:hover {
   background: var(--yellow-bright);
   transform: translateY(-2px);
